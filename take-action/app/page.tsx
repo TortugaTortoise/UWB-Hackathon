@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 let x = "Hello World"
 function testFunction()
@@ -11,7 +12,7 @@ export default function Home() {
     <div className="topnav" id="myTopnav">
       <a href="#home" className="active" >Home</a>
       <a href="#opportunities">Opportunities</a>
-      <a href="/contact">Contact</a>
+      <link href="/contact">Contact</link>
       <a href="#about">About</a>
       <a href="javascript:void(0);" className="icon" onClick={testFunction()}>
         <i className="fa fa-bars"></i>
