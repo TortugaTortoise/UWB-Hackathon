@@ -1,0 +1,38 @@
+/* class if used for multi purpose*/
+/* id is used for specific purpose */
+
+/* class, navigation tab */
+.nav {
+    color:23AE00; 
+    width: 100%;
+    height: 99px;
+    overflow: hidden;
+}
+
+/* Note: a, is refereing to the links, <a href ... */
+/* Style of the links inside the navigation bar */
+.nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2; /*Color of text*/
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* In the navigation tab, the link of the current page will 
+display be a different shade of color */
+.nav a.active {
+    background-color: #14462d;
+    color: white; /* text of link*/
+}
+
+/* In the navigation tab, when hovering over an unactive link t*/
+.nav a:hover {
+    background-color: white;
+    color: black; /* text of link*/
+}
+
+
+

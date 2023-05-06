@@ -7,7 +7,7 @@ function testFunction()
 }
 export default function Home() {
   return (
-<div>
+<div> 
     <div className="topnav" id="myTopnav">
       <a href="#home" className="active" >Home</a>
       <a href="#opportunities">Opportunities</a>
@@ -25,5 +25,7 @@ export default function Home() {
         
     </footer>
 </div>
+
+
   )
 }
