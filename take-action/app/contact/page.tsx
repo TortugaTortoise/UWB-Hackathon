@@ -30,17 +30,16 @@ export default function contact() {
                         {/* opportunties will have a speific link, when over it will have a 
                         drop down box showing two options */}
                         <div className="active">
-                            <button className="" >Opportunities</button>
+                            <p> Opportunity </p>
                             <div className="dropdown-content"> 
                                 <link href="/createOpportunities">Create</link>
                                 <link href="/findOpportunities">Find</link>
-                            </div>
-
+                            </div>          
                         </div>
 
                         <link href="/contact" className="active">Contact</link>
                         <link href="/about" className="active">About</link>
-                        
+
                         <a href="javascript:void(0);" className="icon"> <i className="fa fa-bars"></i> </a>
                     </div>
                 </header>
