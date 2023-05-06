@@ -10,10 +10,10 @@ export default function Home() {
   return (
 <div> 
     <div className="topnav" id="myTopnav">
-      <a href="#home" className="active" >Home</a>
-      <a href="#opportunities">Opportunities</a>
+      <link href="#home" className="active" >Home</link>
+      <link href="#opportunities">Opportunities</link>
       <link href="/contact">Contact</link>
-      <a href="#about">About</a>
+      <link href="#about">About</link >
       <a href="javascript:void(0);" className="icon" onClick={testFunction()}>
         <i className="fa fa-bars"></i>
       </a>

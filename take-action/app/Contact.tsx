@@ -19,12 +19,20 @@ export const Contact = () => {
 
             <body> 
                 <header> {/* top of the page */}
-                    {/* navigation tab */}
+                    {/* navigation tab, holds the links to the otehr pages*/}
                     <div className = "nav"> 
-                        <a href="#home" className="active">Home</a>
-                        <a href="#opportunities" className="active">Opportunities</a>
-                        <a href="/Contact" className="active">Contact</a>
-                        <a href="#about" className="active">About</a>
+                        <link href="/page" className="active">Home</link>
+
+                        {/* opportunties will have a speific link, when over it will have a 
+                        drop down box showing two options */}
+                        <link href="" className="active dropdown">Opportunities</link>
+                            <div className="dropdown-content"> 
+                                <link href="/createOpportunities">Create</link>
+                                <link href="/findOpportunities">Find</link>
+                            </div>
+
+                        <link href="/contact" className="active">Contact</link>
+                        <link href="#about" className="active">About</link>
                     </div>
                 </header>
 
