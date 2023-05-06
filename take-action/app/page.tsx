@@ -17,7 +17,7 @@ export default function Home() {
         <i className="fa fa-bars"></i>
       </a>
     </div>
-
+      
     <main> 
     </main>
 
