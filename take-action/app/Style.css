@@ -3,7 +3,7 @@
 
 /* class, navigation tab */
 .nav {
-    color:23AE00; 
+    color: 23AE00;
     width: 100%;
     height: 99px;
     overflow: hidden;
@@ -14,7 +14,8 @@
 .nav a {
     float: left;
     display: block;
-    color: #f2f2f2; /*Color of text*/
+    color: #f2f2f2;
+    /*Color of text*/
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -25,19 +26,16 @@
 display be a different shade of color */
 .nav a.active {
     background-color: #14462d;
-    color: white; /* text of link*/
+    color: white;
+    /* text of link*/
 }
 
 /* In the navigation tab, when hovering over an unactive link t*/
 .nav a:hover {
     background-color: white;
-    color: black; /* text of link*/
+    color: black;
+    /* text of link*/
 }
 
 /* id,  when hovering over an unactive link t*/
-#dropdown {
-
-}
-
-
-
+#dropdown {}

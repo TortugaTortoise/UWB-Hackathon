@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.homePage {
+    width: fit-content;
+}
+
+.homePage__header {
+    display: flex;
+    background: white;
+    width: fit-content;
+    height: 90vh;
+}
+
+.homePage__header__content>p {
+    width: 80%;
+}
+
+.homePage__partners {
+    background: rgba(159, 159, 159, 0.92);
+    width: 100%;
+    height: auto;
+}
+
+.homePage__partners>img {
+    height: 120px;
+}
