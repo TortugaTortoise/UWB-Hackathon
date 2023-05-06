@@ -1,28 +1,64 @@
 import Image from 'next/image'
+// imports react library, consiting of a javascript library for building interface 
+import React from 'react'; 
+// import style.css, similar to <link href="style.css" rel="stylesheet"/>
+import './style.css'; 
+import './contact.css'; 
+
 
 let x = "Hello World"
 function testFunction() {
     return x
 }
+
+// use as reference: https://www.youtube.com/watch?v=KpA6oEaCHtk&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK&index=3 
+
+// functional component "contact"
 export default function contact() {
     return (
-        <div>
-            <div className="topnav" id="myTopnav">
-                <a href="#home" className="active" >Home</a>
-                <a href="#opportunities">Opportunities</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
-                <a href="javascript:void(0);" className="icon">
-                    <i className="fa fa-bars"></i>
-                </a>
-            </div>
+        <>
+            <head> 
+                <title> Contact Page </title>
+            </head>
 
-            <main>
-            </main>
-            <h1>Contact page</h1>
-            <footer>
+            <body> 
+                <header> {/* top of the page */}
+                    {/* navigation tab, holds the links to the otehr pages*/}
+                    <div className = "nav"> 
+                        <link href="/page" className="active">Home</link>
 
-            </footer>
-        </div>
-    )
+                        {/* opportunties will have a speific link, when over it will have a 
+                        drop down box showing two options */}
+                        <div className="active">
+                            <button className="" >Opportunities</button>
+                            <div className="dropdown-content"> 
+                                <link href="/createOpportunities">Create</link>
+                                <link href="/findOpportunities">Find</link>
+                            </div>
+
+                        </div>
+
+                        <link href="/contact" className="active">Contact</link>
+                        <link href="/about" className="active">About</link>
+                        
+                        <a href="javascript:void(0);" className="icon"> <i className="fa fa-bars"></i> </a>
+                    </div>
+                </header>
+
+                <main> {/* main content of the page located here */}
+                    <div className="contact_info">
+
+                        <p> </p>
+
+
+
+                    /</div>
+                </main>
+
+                <footer>  {/* bottom of the page */}
+
+                </footer>
+            </body>
+        </>
+    ); 
 }
