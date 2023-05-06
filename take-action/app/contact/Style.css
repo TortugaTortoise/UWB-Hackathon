@@ -37,10 +37,9 @@ display be a different shade of color */
     /* text of link*/
 }
 
-<<<<<<< HEAD:take-action/app/Style.css
 /* id,  when hovering over an unactive link t*/
 #dropdown {}
-=======
+
 
 /* link reference: https://www.w3schools.com/css/css_dropdowns.asp */
 /* id,  when hovering over an unactive link */
@@ -49,12 +48,12 @@ display be a different shade of color */
     display: inline-block;
 }
 
-.dropdown-content{
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f2f2f2;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px, 16px;
     z-index: 1;
 }
@@ -62,8 +61,3 @@ display be a different shade of color */
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-
-
-
->>>>>>> 822ba498048b8a63f9f0e382325e3e8467f21183:take-action/app/contact/Style.css
