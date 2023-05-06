@@ -13,8 +13,6 @@ export const Contact = () => {
         <>
             <head> 
                 <title> Contact Page </title>
-                <link href="style.css" rel="stylesheet" /> 
-                <link href="contact.css" rel="stylesheet" /> 
             </head>
 
             <body> 
@@ -25,14 +23,17 @@ export const Contact = () => {
 
                         {/* opportunties will have a speific link, when over it will have a 
                         drop down box showing two options */}
-                        <link href="" className="active dropdown">Opportunities</link>
+                        <div className="active">
+                            <button className="" >Opportunities</button>
                             <div className="dropdown-content"> 
                                 <link href="/createOpportunities">Create</link>
                                 <link href="/findOpportunities">Find</link>
                             </div>
 
+                        </div>
+
                         <link href="/contact" className="active">Contact</link>
-                        <link href="#about" className="active">About</link>
+                        <link href="/about" className="active">About</link>
                     </div>
                 </header>
 
