@@ -1,11 +1,22 @@
 import Image from 'next/image'
+// imports react library, consiting of a javascript library for building interface 
+import React from 'react'; 
+// import style.css, similar to <link href="style.css" rel="stylesheet"/>
+import './style.css'; 
+import './contact.css'; 
+
 
 let x = "Hello World"
 function testFunction() {
     return x
 }
+
+// use as reference: https://www.youtube.com/watch?v=KpA6oEaCHtk&list=PLC3y8-rFHvwi1AXijGTKM0BKtHzVC-LSK&index=3 
+
+// functional component "contact"
 export default function contact() {
     return (
+<<<<<<< HEAD
         <div>
 
 
@@ -13,4 +24,50 @@ export default function contact() {
             <h1>Contact page</h1>
         </div>
     )
+=======
+        <>
+            <head> 
+                <title> Contact Page </title>
+            </head>
+
+            <body> 
+                <header> {/* top of the page */}
+                    {/* navigation tab, holds the links to the otehr pages*/}
+                    <div className = "nav"> 
+                        <link href="/page" className="active">Home</link>
+
+                        {/* opportunties will have a speific link, when over it will have a 
+                        drop down box showing two options */}
+                        <div className="active">
+                            <p> Opportunity </p>
+                            <div className="dropdown-content"> 
+                                <link href="/createOpportunities">Create</link>
+                                <link href="/findOpportunities">Find</link>
+                            </div>          
+                        </div>
+
+                        <link href="/contact" className="active">Contact</link>
+                        <link href="/about" className="active">About</link>
+
+                        <a href="javascript:void(0);" className="icon"> <i className="fa fa-bars"></i> </a>
+                    </div>
+                </header>
+
+                <main> {/* main content of the page located here */}
+                    <div className="contact_info">
+
+                        <p> </p>
+
+
+
+                    /</div>
+                </main>
+
+                <footer>  {/* bottom of the page */}
+
+                </footer>
+            </body>
+        </>
+    ); 
+>>>>>>> 822ba498048b8a63f9f0e382325e3e8467f21183
 }

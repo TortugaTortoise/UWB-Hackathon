@@ -11,7 +11,7 @@
 
 /* Note: a, is refereing to the links, <a href ... */
 /* Style of the links inside the navigation bar */
-.nav a {
+.nav link {
     float: left;
     display: block;
     color: #f2f2f2;
@@ -24,18 +24,46 @@
 
 /* In the navigation tab, the link of the current page will 
 display be a different shade of color */
-.nav a.active {
+.nav link.active {
     background-color: #14462d;
     color: white;
     /* text of link*/
 }
 
 /* In the navigation tab, when hovering over an unactive link t*/
-.nav a:hover {
+.nav link:hover {
     background-color: white;
     color: black;
     /* text of link*/
 }
 
+<<<<<<< HEAD:take-action/app/Style.css
 /* id,  when hovering over an unactive link t*/
 #dropdown {}
+=======
+
+/* link reference: https://www.w3schools.com/css/css_dropdowns.asp */
+/* id,  when hovering over an unactive link */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px, 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+>>>>>>> 822ba498048b8a63f9f0e382325e3e8467f21183:take-action/app/contact/Style.css
