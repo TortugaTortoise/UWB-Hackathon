@@ -16,11 +16,11 @@ export default function contact() {
             <main> {/* main content of the page located here */}
                 <div className="contact_info">
 
-                    <p> </p>
+                    <p> asdfmndb,fdjnabk</p>
 
 
 
-                    /</div>
+                    </div>
             </main>
 
             <footer>  {/* bottom of the page */}
