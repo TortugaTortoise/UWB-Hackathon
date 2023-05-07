@@ -1,4 +1,11 @@
-// pages/api/login.js
+/**
+ * Created by Houming Ge
+ */
+
+/**
+ * A Server side code
+ * an API route that will handle the database queries
+ */
 import db from '../../config/db'
 
 export default async function handler(req, res) {

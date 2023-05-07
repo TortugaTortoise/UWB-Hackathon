@@ -1,3 +1,11 @@
+/**
+ * Created by Dong Nguyen
+ * redesign by Houming Ge
+ */
+
+/**
+ * component to use the API route in the login page
+ */
 'use client'
 import './loginSignup.css'
 import { useState } from 'react'
