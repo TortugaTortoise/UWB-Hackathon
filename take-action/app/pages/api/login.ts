@@ -8,9 +8,9 @@
  */
 import { createConnection } from 'mysql2';
 import { NextApiRequest, NextApiResponse } from 'next';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
-dotenv.config();
+// dotenv.config();
 
 const connection = createConnection({
     host: process.env.DB_HOST,
