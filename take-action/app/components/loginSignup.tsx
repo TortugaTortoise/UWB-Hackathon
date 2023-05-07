@@ -8,7 +8,16 @@
  */
 'use client'
 import './loginSignup.css'
-import { useState } from 'react'
+import { SetStateAction, useState } from 'react'
+import mariadb from 'mariadb'
+
+const pool = mariadb.createPool({
+    host: 'catisnameofcat.tk',
+    user: 'admin',
+    password: '123456789',
+    database: 'wpdb',
+    connectionLimit: 5
+});
 
 export default function loginSignup() {
     const [isCloseForm, setIsCloseForm] = useState(false)
@@ -24,30 +33,29 @@ export default function loginSignup() {
         setIsCloseForm(!isCloseForm)
     }
 
-    const handleOnChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleOnChangeEmail = (e: { target: { value: SetStateAction<string>; }; }) => {
         setUserEmail(e.target.value)
     }
-
-    const handleOnChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleOnChangePassword = (e: { target: { value: SetStateAction<string>; }; }) => {
         console.log(e.target.value)
         setUserPassword(e.target.value)
+
     }
     const handleLogin = async () => {
-        const response = await fetch('/api/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ email: userEmail, password: userPassword })
-        })
-
-        const data = await response.json()
-
-        if (response.ok) {
-            setIsUserPasswordEmailValid(true)
-            // Do something after successful login
-        } else {
-            setIsUserPasswordEmailValid(false)
+        console.log(userEmail, userPassword)
+        let conn;
+        try {
+            conn = await pool.getConnection();
+            const rows = await conn.query('SELECT * FROM users WHERE email = ? AND password = ?', [userEmail, userPassword]);
+            if (rows.length === 0) {
+                setIsUserPasswordEmailValid(false);
+            } else {
+                setIsUserPasswordEmailValid(true);
+            }
+        } catch (err) {
+            throw err;
+        } finally {
+            if (conn) return conn.end();
         }
     }
 
