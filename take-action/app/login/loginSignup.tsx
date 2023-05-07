@@ -9,14 +9,14 @@
 'use client'
 import './loginSignup.css'
 import { SetStateAction, useState } from 'react'
-import mariadb from 'mariadb-server'
 
-const pool = mariadb.createPool({
+const mysql = require('mysql2');
+
+const pool = mysql.createConnection({
     host: 'catisnameofcat.tk',
     user: 'admin',
     password: '123456789',
-    database: 'wpdb',
-    connectionLimit: 5
+    database: 'wpdb'
 });
 
 export default function loginSignup() {
