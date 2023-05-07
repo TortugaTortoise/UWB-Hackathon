@@ -9,7 +9,7 @@
 'use client'
 import './loginSignup.css'
 import { SetStateAction, useState } from 'react'
-import mariadb from 'mariadb'
+import mariadb from 'mariadb-server'
 
 const pool = mariadb.createPool({
     host: 'catisnameofcat.tk',
