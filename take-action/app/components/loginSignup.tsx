@@ -16,28 +16,28 @@ export default function loginSignup() {
         setIsCloseForm(!isCloseForm)
     }
 
-    const handleOnChangeEmail = (e) => {
-        setUserEmail(e.target.value)
+    const handleOnChangeEmail = () => {
+        //setUserEmail(e.target.value)
     }
-    const handleOnChangePassword = (e) => {
-        console.log(e.target.value)
-        setUserPassword(e.target.value)
+    const handleOnChangePassword = () => {
+        //console.log(e.target.value)
+        //setUserPassword(e.target.value)
 
     }
     const handleLogin = async () => {
         console.log(userEmail, userPassword)
-        const token = await fetch('//// server url', {
-            headers: {
-                email: userEmail,
-                password: userPassword
-            }
-        })
-        if (token == 'Error') {
-            setIsUserPasswordEmailValid(false)
-        }
-        else {
-            isUserPasswordEmailValid(true)
-        }
+        //const token = await fetch('//// server url', {
+        //    headers: {
+        //        email: userEmail,
+        //        password: userPassword
+        //    }
+        //})
+        //if (token == 'Error') {
+        //    setIsUserPasswordEmailValid(false)
+        //}
+        //else {
+        //    isUserPasswordEmailValid(true)
+        //}
     }
 
     return (
