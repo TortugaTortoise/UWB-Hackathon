@@ -6,7 +6,9 @@
 /**
  * component to use the API route in the login page
  */
-import React, { useState } from 'react';
+'use client'
+import './loginSignup.css'
+import { useState } from 'react'
 import mysql from 'mysql2';
 
 const connection = mysql.createConnection({
@@ -25,19 +27,19 @@ connection.connect((err) => {
     console.log('Connected to database as id ' + connection.threadId);
 });
 
-function LoginRegistrationForm() {
-    const [username, setUsername] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [loginUsername, setLoginUsername] = useState('');
-    const [loginPassword, setLoginPassword] = useState('');
+
+function loginSignup() {
+    const [isCloseForm, setIsCloseForm] = useState(false)
+    const [isUserPasswordEmailValid, setIsUserPasswordEmailValid] = useState(true)
+    const [userEmail, setUserEmail] = useState('')
+    const [userPassword, setUserPassword] = useState('')
 
     const handleRegisterSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         // insert user information into the database
         const sql = `INSERT INTO users (username, email, password) VALUES (?, ?, ?)`;
-        connection.query(sql, [username, email, password], (error, results, fields) => {
+        connection.query(sql, [userEmail, userEmail, userPassword], (error, results, fields) => {
             if (error) {
                 console.error('Error inserting user: ' + error.stack);
                 return;
@@ -51,7 +53,7 @@ function LoginRegistrationForm() {
 
         // query the database to check if the user exists
         const sql = `SELECT * FROM users WHERE username = ? AND password = ?`;
-        connection.query(sql, [loginUsername, loginPassword], (error, results, fields) => {
+        connection.query(sql, [userEmail, userPassword], (error, results, fields) => {
             if (error) {
                 console.error('Error querying database: ' + error.stack);
                 return;
@@ -68,22 +70,22 @@ function LoginRegistrationForm() {
         <div className="container">
             <form className="form" onSubmit={handleLoginSubmit}>
                 <h2>Login</h2>
-                <input type="text" placeholder="Username" value={loginUsername} onChange={e => setLoginUsername(e.target.value)} required />
-                <input type="password" placeholder="Password" value={loginPassword} onChange={e => setLoginPassword(e.target.value)} required />
+                <input type="text" placeholder="Username" value={userEmail} onChange={e => setUserEmail(e.target.value)} required />
+                <input type="password" placeholder="Password" value={userPassword} onChange={e => setUserPassword(e.target.value)} required />
                 <button type="submit">Login</button>
             </form>
             <form className="form" onSubmit={handleRegisterSubmit}>
                 <h2>Register</h2>
-                <input type="text" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} required />
-                <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required />
-                <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required />
+                <input type="text" placeholder="Username" value={userEmail} onChange={e => setUserEmail(e.target.value)} required />
+                <input type="email" placeholder="Email" value={userEmail} onChange={e => setUserEmail(e.target.value)} required />
+                <input type="password" placeholder="Password" value={userEmail} onChange={e => setUserPassword(e.target.value)} required />
                 <button type="submit">Register</button>
             </form>
         </div>
     );
 }
 
-export default LoginRegistrationForm;
+export default loginSignup;
 
 // 'use client'
 // import './loginSignup.css'
